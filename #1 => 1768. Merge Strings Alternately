@@ -1,0 +1,31 @@
+class Solution {
+    // Ikki so'zni almashtirib birma-bir bog'lab chiqaruvchi funksiya
+    public String mergeAlternately(String so'z1, String so'z2) {
+        // Natijani saqlash uchun StringBuilder obyekti yaratamiz
+        StringBuilder natija = new StringBuilder();
+
+        // `i` o'zgaruvchisi
+        int i = 0;
+
+        // Har ikki so'z hamamizda karakterlar tugaguncha davom etamiz
+        while (i < so'z1.length() || i < so'z2.length()) {
+            // Agar `i` katta bo'lsa, so'z1 dan bir harf qo'shamiz
+            if (i < so'z1.length()) {
+                natija.append(so'z1.charAt(i));
+            }
+            // Agar `i` katta bo'lsa, so'z2 dan bir harf qo'shamiz
+            if (i < so'z2.length()) {
+                natija.append(so'z2.charAt(i));
+            }
+            // `i` o'zgaruvchisini o'zgartiramiz
+            i++;
+        }
+
+        // Natijani stringga aylantirib qaytarish
+        return natija.toString();
+    }
+}
+
+#Ushbu Java klassi ikki so'zni almashtirib, birma-bir bog'lab qo'shib chiqaruvchi funksiyani 
+#o'z ichiga oladi. Bu funksiya "mergeAlternately" deyiladi va "word1" va "word2" kiritilgan 
+#so'zlarini almashtirib, ularni birma-biriga bog'laydi va natijani qaytaradi.
